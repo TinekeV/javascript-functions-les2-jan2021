@@ -71,14 +71,14 @@ function greetAll(nameArray) {
     let greetAll = "Hoi ";
 
     for (let i = 0; i < nameArray.length; i++) {
-        if (i === nameArray.length -1) {
+        if (i === nameArray.length -1) {                                    // scenario 1 - conditional
             return greetAll = greetAll + " en " + nameArray[i] + "!";
         }
-        if (nameArray.length === 2 || i === nameArray.length -2) {
+        if (nameArray.length === 2 || i === nameArray.length -2) {          // scenario 2 - conditional
             greetAll = greetAll + nameArray[i];
         }
         else {
-            greetAll = greetAll + nameArray[i] + ", ";
+            greetAll = greetAll + nameArray[i] + ", ";                      // scenario 3 - conditional
         }
     }
 
@@ -88,3 +88,5 @@ function greetAll(nameArray) {
 console.log(greetAll(['Nick', 'Nova', 'Mitchel', 'Arjen']));
 console.log(greetAll(['Piet', 'Henk']));
 console.log(greetAll(['A', 'B', 'C', 'D', 'E', 'F']))
+
+//!!! SCHRIJF ALTIJD HET VOLLEDIGE STAPPENPLAN UIT, EN KIJK OOK OF ER MEERDERE SCENARIO'S ZIJN
