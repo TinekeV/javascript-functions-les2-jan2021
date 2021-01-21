@@ -47,8 +47,8 @@ console.log(nameCharacters('kaas', 'Q'))
 // ["abra", "cadabra"] geeft "abracadabra"
 // ["a", "b", "c"] geeft "abc"
 
-function stringArray(wordArray) {
-    let fullString = "";
+function magicArray(wordArray) {
+    let fullString = '';
 
     for (let i = 0; i < wordArray.length; i++) {
         fullString = fullString + wordArray[i]
@@ -57,8 +57,8 @@ function stringArray(wordArray) {
     return fullString;
 }
 
-console.log(stringArray(['abra', 'cadabra']))
-console.log(stringArray(['a', 'b', 'c']))
+console.log(magicArray(['abra', 'cadabra']))
+console.log(magicArray(['a', 'b', 'c']))
 
 /* Opdracht 5 */
 // Schrijf een functie die een array van strings verwacht en een gezamelijke groet teruggeeft
@@ -67,24 +67,24 @@ console.log(stringArray(['a', 'b', 'c']))
 // ["Piet", "Henk"] geeft "Hoi Piet en Henk!"
 // ["A", "B", "C", "D", "E", "F"] geeft "Hoi A, B, C, D, E en F!"
 
-function greeting(nameArray) {
-    let greeting = "Hoi ";
+function greetAll(nameArray) {
+    let greetAll = "Hoi ";
 
     for (let i = 0; i < nameArray.length; i++) {
         if (i === nameArray.length -1) {
-            return greeting = greeting + " en " + nameArray[i] + "!";
+            return greetAll = greetAll + " en " + nameArray[i] + "!";
         }
         if (nameArray.length === 2 || i === nameArray.length -2) {
-            greeting = greeting + nameArray[i];
+            greetAll = greetAll + nameArray[i];
         }
         else {
-            greeting = greeting + nameArray[i] + ", ";
+            greetAll = greetAll + nameArray[i] + ", ";
         }
     }
 
-    return greeting
+    return greetAll
 }
 
-console.log(greeting(['Nick', 'Nova', 'Mitchel', 'Arjen']));
-console.log(greeting(['Piet', 'Henk']));
-console.log(greeting(['A', 'B', 'C', 'D', 'E', 'F']))
+console.log(greetAll(['Nick', 'Nova', 'Mitchel', 'Arjen']));
+console.log(greetAll(['Piet', 'Henk']));
+console.log(greetAll(['A', 'B', 'C', 'D', 'E', 'F']))
